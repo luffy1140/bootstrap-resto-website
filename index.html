@@ -10,19 +10,30 @@
 		<link href="assets/css/bootstrap-grid.css" rel="stylesheet">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
-<script src="jquery-3.3.1.min.js"></script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<link href="assets/css.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.0/TweenMax.min.js"></script>
 <script src="assets/js/script.js"></script>
 
 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/debug.addIndicators.js"></script>
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="assets/css/bootstrap-grid.css" rel="stylesheet">
 </head>
 
-<body onload="fadeOutTitleName()">
+<body onload="fadeout()">
 	<header>
 
 
@@ -30,36 +41,40 @@
 
 	</header>
 
-	<nav class="navbar fixed-top navbar-expand-md navbar-danger bg-dark">
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+</head>
 
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+<div class="collapse navbar-collapse" id="navbarsExample01">
 <ul class="navbar-nav  navbar-right text-white">
-	<li class="nav-item">
-		<a class="btn btn-danger navbar-btn" href="index.html">Accueil</a>
-	</li>
-	<li class="nav-item">
-		<a class="nav-link text-white bg-dark" href="carte.html">Carte</a>
-	</li>
-	<li class="nav-item">
-		<a class="nav-link text-white bg-dark" href="photos.html">Photos</a>
-	</li>
-	<li class="nav-item">
-		<a class="nav-link text-white bg-dark" href="restaurant.html">Restaurant</a>
-	</li>
-	<li class="nav-item">
-	 <a class="nav-link text-white bg-dark" href="contact.html">Contact</a>
- </li>
+<li class="nav-item active">
+	<a class="btn btn-danger navbar-btn" href="index.html">Accueil<span class="sr-only">(current)</span></a>
+</li>
+<li class="nav-item">
+	<a class="nav-link text-white bg-dark" href="carte.html">Carte</a>
+</li>
+<li class="nav-item">
+	<a class="nav-link text-white bg-dark" href="photos.html">Photos</a>
+</li>
+<li class="nav-item">
+	<a class="nav-link text-white bg-dark" href="restaurant.html">Restaurant</a>
+</li>
+<li class="nav-item">
+ <a class="nav-link text-white bg-dark" href="contact.html">Contact</a>
+</li>
 </ul>
-		</nav>
+</div>
+	</nav>
 
 
 
 <div class="jumbotron">
 	<div class="container push-spaces">
-  <h2 id="yo" class="display-4" fadeOutTitleName()>Bienvenue </h2>
-	<p id="presentation"> <span id="prenom"></span> Lorem vous y accueille dans un cadre moderne avec une touche « vintage ».
+  <h2 id="yo" class="display-4">Bienvenue </h2>
+	<p id="presentation"> <span id="prenom"></span> Lorem vous  accueille dans un cadre moderne avec une touche « vintage ».
 
 La carte se cache dans d'anciennes pochettes de 33 tours.
 
@@ -129,7 +144,7 @@ Un large choix de pizzas cuites au feu de bois, des suggestions saisonnières, a
             <i class="fab fa-linkedin-in"> </i>
           </a>
         </li>
-      
+
       </ul>
 
 

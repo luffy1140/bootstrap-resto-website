@@ -20,7 +20,8 @@ function checkTime(i) {
   if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
   return i;
 }*/
-window.onload = function what(){
+
+window.addEventListener("load",function what(){
 var dateObj = new Date();
 var month = dateObj.getUTCMonth() + 1; //months from 1-12
 var day = dateObj.getUTCDate();
@@ -40,13 +41,14 @@ m = checkTime(m);
     document.getElementsByClassName('open')[i].innerHTML = "Nous sommes actuellement ouverts."
   }
 }
+},false);
   function checkTime(i) {
   if (i < 10) {i = "0" + i};
   return i;
 }
-}
 
-function fadeOutTitleName(){
+
+function fadeout(){
      var words = [
          'Bienvenue',
          'Chez',
@@ -66,3 +68,16 @@ function fadeOutTitleName(){
        });
    }, 2000);
  }
+
+window.addEventListener("load",function test() {
+  var controller = new ScrollMagic.Controller();
+   var a = document.getElementsByClassName('test');
+ var t=TweenLite.from(a, 3, {left:"-1300px"});
+  TweenLite.to(a, 3, {left:"0px"});
+   var scene = new ScrollMagic.Scene({
+  offset:200
+})
+
+  .setTween(t)
+  .addTo(controller);
+},false);
