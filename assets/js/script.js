@@ -17,7 +17,7 @@
   var t = setTimeout(startTime, 500);
 }
 function checkTime(i) {
-  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  if (i < 10) {i = "0" + i};
   return i;
 }*/
 
@@ -34,7 +34,7 @@ m = checkTime(m);
   s = checkTime(s);
   for (var i =0; i<3; i++){
   document.getElementsByClassName('txt')[i].innerHTML = "Nous sommes le " +day + "/" + month  + "/" + year +" " + "et il est " + h+"h"+m+".";
-  if (m<12 || m>23){
+  if (m<12 || m>23 ){
       document.getElementsByClassName('open')[i].innerHTML = "Nous sommes actuellement fermés."
   }
   else {
@@ -55,13 +55,10 @@ function fadeout(){
          'Lorem',
      ]
      var i = 0;
-     // Run la fonction toutes les 2.5 secondes
      setInterval(function() {
        $("#yo").fadeOut(function() {
-         // Incremente le mot a affiché
          i++
          if(i == words.length){
-             // On remet a 0 si on a fait tout les mots
              i = 0;
          }
          $(this).html(words[i]).fadeIn();
@@ -73,11 +70,26 @@ window.addEventListener("load",function test() {
   var controller = new ScrollMagic.Controller();
    var a = document.getElementsByClassName('test');
  var t=TweenLite.from(a, 3, {left:"-1300px"});
-  TweenLite.to(a, 3, {left:"0px"});
+  var te=TweenLite.to(a, 3, {left:"0px"});
    var scene = new ScrollMagic.Scene({
   offset:200
 })
-
+.setTween(te)
   .setTween(t)
   .addTo(controller);
+},false);
+
+var slideIndex = 0;
+
+
+window.addEventListener("load",function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}
+  x[slideIndex-1].style.display = "block";
+  setTimeout(carousel, 1500);
 },false);
